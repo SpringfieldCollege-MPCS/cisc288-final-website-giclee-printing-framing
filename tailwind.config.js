@@ -9,9 +9,15 @@ module.exports = {
         ribbon: '#D68C8C',
         darkRibbon: '#BE1F3C',
         tan: '#DBCDC5'
-
+      },
+      fontFamily: {
+      navtext: 'Inter',
+      bodytext: 'Faustina',
+      secheader: 'Merriweather',
+      buttontext: 'IBM Plex Sans Thai Looped'
       }
     }
+
   },
   variants: {},
   plugins: [
