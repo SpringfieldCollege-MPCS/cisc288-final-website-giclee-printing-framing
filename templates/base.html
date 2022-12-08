@@ -7,17 +7,18 @@
 <head>
   <meta charset="utf-8">
   <title>MyBlog</title>
+  <script src="//unpkg.com/alpinejs" defer></script>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
 </head>
 
-<body>
+<body class="bg-background">
 
   {% block header %}
     {{ macros_header::header() }}
   {% endblock header %}
 
   <section>
-    <div class="container mx-auto max-w-7xl p-8">
+    <div class="">
       {% block content %} {% endblock %}
     </div>
   </section>

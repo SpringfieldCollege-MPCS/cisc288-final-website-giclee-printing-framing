@@ -1,12 +1,70 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="prose">
-  <h1 class="title">
-    This is my blog made with Zola.
-  </h1>
-  <p>
-      Here are all the <a href="/blog">blogs</a>
-  </p>
+
+  
+  <video
+    autoplay
+    loop
+    muted
+    class="min-w-full max-h-[400px] "
+  >
+    <source
+      
+      src="https://assets.mixkit.co/videos/preview/mixkit-set-of-plateaus-seen-from-the-heights-in-a-sunset-26070-large.mp4"
+
+      type="video/mp4"
+    />
+  </video>
+
+
+<section class="container relative max-w-[1440px] mx-auto px-8 py-5">
+  <h4 class="text-4xl text-darkRibbon text-center sm:pl-8 sm:text-left smfont-secheader-400 mb-5">What We Do</h4>
+  <div class="flex items-center flex-wrap mb-2">
+    <div class="w-full md:w-1/2 pr-10">
+      
+      <p class="text-gray-600 mb-8">Here at Giclée Printing & Framing, we develop strong relationships with our customers, some who travel for hours to bring their artwork in to be scanned, proofed and when approved, reproduced as Giclée prints.  Personal service is hard to find in any area of business however that is one of the most important factors in making sure all our customers are completely satisfied with our services and products.
+        <br><br>
+        Giclée Printing & Framing of New England serves companies and individuals from all over the U.S.A and internationally, by providing high quality imaging, Giclée printing, custom picture framing, photography services, and professional consulting services.  We are conveniently located between Springfield and Worcester.
+
+      </p>
+    </div>
+    <div class="w-full md:w-1/2 flex items-end justify-center">
+      <img class="w-[400px] min-h-[280px] z-20" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="Vortex" />
+    </div>
+  </div>
+  <div class="absolute w-[900px] h-44 z-10 top-12 -right-40 bg-tan">
+
+  </div>
+
 </section>
+
+<section class="container relative max-w-[1440px] mx-auto px-8 py-5">
+  <h4 class="text-4xl text-darkRibbon text-center font-secheader-400 mb-5">Popular Services</h4>
+  <div class="flex items-center justify-center  mb-2">
+  
+    <img class="w-65" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="Vortex" />
+    
+  </div>
+
+</section>
+
+
+<section class="relative">
+<div class="flex items-center justify-items-start">
+  <div class="relative flex flex-col items-center justify-center">
+    <h2 class="text-3xl font-bodytext-500 pl-12 font-black">Want to customize your own frame instead? </h2>
+    <div class="">
+      <div class="inline-block  h-[4px] w-[900px] border-none bg-darkRibbon"></div>
+      <div class="inline-block h-0 w-0 border-t-[10px] border-t-background border-b-[10px] border-b-background border-r-[10px] border-r-red-800 bg-darkRibbon"></div>
+    </div>
+  </div>
+  <button class="ml-64 text-3xl font-semibold bg-red-500 cursor-pointer hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 ">
+    Go To Custom Framing
+  </button>
+  </div>
+</section>
+
+</div>>
+
 {% endblock content %}
