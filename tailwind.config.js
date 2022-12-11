@@ -11,7 +11,7 @@ module.exports = {
         tan: '#DBCDC5'
       },
       fontFamily: {
-      navtext: 'Inter',
+      navtext: ['Inter', 'sans-serif'],
       bodytext: 'Faustina',
       secheader: 'Merriweather',
       buttontext: 'IBM Plex Sans Thai Looped'
