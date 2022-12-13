@@ -16,7 +16,6 @@
   </video> -->
 
   <div class="w-full">
-    <img class="w-full h-[412px]" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="Vortex" />
     
   </div>
 
@@ -33,7 +32,8 @@
       </p>
     </div>
     <div class="z-20 mb-5">
-      <img class="w-[450px] min-h-[300px]" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="couple hanging frame" />
+      {% set image = resize_image(path="images/couplehanging_frame.png", width=1000, height=412, op="fill") %}
+      <img class="w-[480px] min-h-[300px]" src="{{image.url}}" alt="Vortex" />
     </div>
   </div>
   <div class="hidden desktop:block desktop:absolute w-[850px] h-44 z-0 top-6 right-0 bg-tan">
