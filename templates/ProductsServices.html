@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="flex flex-col">
+    <div class="flex flex-row h-auto w-auto">
+      <!-- 1 of the 2 big colums under picture-->
+        <div class="w-52 h-auto bg-tan" ></div>
+      <!-- the 2nd big column where almost all information will be-->
+        <div class="w-full h-auto flex flex-col">
+            <div class="mt-16 text-6xl text-darkRibbon font-secheader text-center">Select Your Service</div>
+            <div class="h-auto w-auto grid grid-cols-3 gap-x-16 mt-12 ml-28 mr-28">
+                <div class="flex flex-col w-60 h-auto">
+                    <a href="/wallapeel">
+                        <img class="w-[280px] min-h-[158px]" src="https://via.placeholder.com/280x158.jpg" alt="Frames" >
+                    </a>
+                    <div class="text-center font-bodytext font-bold mt-4">Wall A Peel</div>
+                </div>
+                <div class="flex flex-col w-60 h-auto">
+                    <a href="/digitalimageediting">
+                        <img class="w-[280px] min-h-[158px]" src="https://via.placeholder.com/280x158.jpg" alt="Frames" >
+                    </a>
+                    <div class="text-center font-bodytext font-bold mt-4">Digital Image Editing</div>
+                </div>
+                <div class="flex flex-col w-60 h-auto">
+                    <a href="/mediatypes">
+                        <img class="w-[280px] min-h-[158px]" src="https://via.placeholder.com/280x158.jpg" alt="Frames" >
+                    </a>
+                    <div class="text-center font-bodytext font-bold mt-4">Media Types</div>
+                </div>
+            </div>
+            <div class="h-auto grid grid-cols-2 gap-x-32 mr-72 ml-72 mt-8 mb-24">
+                <div class="flex flex-col w-auto h-auto">
+                    <a href="/printpackages">
+                        <img class="w-[316px] min-h-[158px]" src="https://via.placeholder.com/316x158.jpg" alt="Frames" >
+                    </a>
+                    <div class="text-center font-bodytext font-bold mt-4">Print Packages</div>
+                </div>
+                <div class="flex flex-col w-auto h-auto">
+                    <a href="/customframing">
+                        <img class="w-[316px] min-h-[158px]" src="https://via.placeholder.com/316x158.jpg" alt="Frames" >
+                    </a>
+                    <div class="text-center font-bodytext font-bold mt-4">Custom Framing</div>
+                </div>
+            </div>
+        </div>
+                
+            
+        
+        <div class="w-52 h-auto bg-tan"></div>
+{% endblock content %}

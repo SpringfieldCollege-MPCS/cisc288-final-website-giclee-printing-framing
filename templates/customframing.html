@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col">
+    <div class="flex flex-row h-auto w-auto">
+      <!-- 1 of the 2 big colums under picture-->
+        <div class="w-52 h-auto bg-tan" ></div>
+        <div class="flex flex-col w-screen">
+            <div class="mt-32">
+                <p class="w-full font-secheader text-darkRibbon text-6xl -mt-9 absolute text-center">Custom Framing</p>
+                <div class="-ml-12 h-auto">
+                    <img class="w-[1155px] min-h-[266px]" src="https://via.placeholder.com/1155x266.jpg" alt="Frames" >
+                </div>
+            </div>
+            <div class="flex flex-row">
+                <!--First column under picture-->
+                <div class="flex flex-col">
+                    <h1 class="w-auto h-auto font-secheader text-darkRibbon text-4xl mt-12 ml-16 ">Custom Framing, Color <br> Design & Finishing</h1>
+                    <div class="mt-9 ml-28 w-72 h-auto">
+                        <p class="font-bodytext">Our custom frame shop offers a full line of moldings’ and acid free mats.   Utilizing industry standards, a work of art or fine photography is not complete until it is framed and prepared to hang in your home or in a gallery.</p>
+                        <p class="font-bodytext mt-12">Our frame shop also offers many finishing options for artists. We can dry mount your images to foam or gator board. We can mat and shrink wrap your prints for sale or presentation.</p>
+                    </div>
+                    <div class="mt-16 ml-24">
+                        <a href="/pricing">
+                            <button class=" h-24 w-80 border text-3xl bg-darkRibbon cursor-pointer hover:bg-red-700 text-white font-bodytext py-2 px-4 ">See Print Pricing</button>
+                        </a>
+                    </div>
+                    <div class="mt-48">
+                        <h1 class="font-secheader text-darkRibbon text-4xl text-right -mr-12 ">Disclaimers</h1>
+                    </div>
+                </div>
+                <!--Second column * right of first column *-->
+                <div class="flex flex-col  h-auto">
+                    <div class="mt-56 ml-10">
+                        <h1 class="w-[460] h-auto font-secheader text-darkRibbon text-4xl">Color Design Specialist<br>By Appointment</h1>
+                        <div class="w-64 h-auto mt-7 ml-12">
+                            <p class="font-bodytext">Let’s face it, some of us just do not have a good eye for color especially matching complimentary colors..  Even if you do have a  talent for colors, sometimes it’s beneficial to have someone else take a look and provide additional options.  Call to setup an appointment with our color design specialist who will help you decide what will best enhance your image or artwork. </p>
+                            <p class="ml-3 font-bodytext font-bold">*Extra fee required for this special service*</p>
+                        </div>
+                    </div>
+                    <div class=" w-96 h-auto mt-56 ml-16 mb-20">
+                        <p class="font-bodytext">Due to copyright laws, we will need proof of artist / photographer consent to print works that are not originating from you.  Exceptions include pieces that are 100+ yrs old or in the public domain.</p>
+                        <p class="font-bodytext">Print pricing may vary due to supply chain issues and increased prices of our papers, matboards, foam core and frames. Unfortunately these costs must be passed on in order for our business to survive. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock content %}

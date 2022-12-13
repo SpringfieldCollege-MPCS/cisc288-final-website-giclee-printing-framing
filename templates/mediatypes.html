@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-col">
+    <div class="flex flex-row h-auto w-auto">
+      <!-- 1 of the 2 big colums under picture-->
+        <div class="w-52 h-auto bg-tan" ></div>
+        <div class="flex flex-col w-screen">
+            <div class="mt-32">
+                <p class="w-full font-secheader text-darkRibbon text-6xl -mt-7 absolute text-center">Media Types</p>
+                <div class="-ml-12 h-auto">
+                    <img class="w-[1111px] min-h-[292px]" src="https://via.placeholder.com/1111x292.jpg" alt="Frames" >
+                </div>
+            </div>
+            <div class="flex flex-row">
+                <!--First column under picture-->
+                <div class="flex flex-col">
+                    <h1 class="w-auto h-auto font-secheader text-darkRibbon text-4xl mt-16 ml-24 ">Price Per Square<br> Foot for Media:</h1>
+                    <div class="mt-7 ml-28 w-96 h-auto">
+                        <ul class="font-bodytext list-disc">
+                            <li>Wall-A-Peel” Self-Adhesive Wall Fabric - $19 sq ft </li>
+                            <li>Breathing Color Lyve Canvas* - $23 sq ft </li>
+                            <li>Breathing Color Silverado (glossy) Canvas* - $21.50 sq ft </li>
+                            <li>Breathing Color Elegance Velvet (textured watercolor paper) - $21.50 sq ft is our most popular fine art paper.</li>
+                            <li>Breathing Color Emblem is a warmer version of Elegance Velvet textured fine art paper - $21.50 sq ft. </li>
+                            <li>Canon Archival Matte - $21.50 sq ft </li>
+                            <li>Hahnemuhle Baryta Photo Rag - $21.50 sq ft</li>
+                            <li>Hahnemuhle Sugar Cane - $21.50 sq ft</li>
+                            <li>Pearl Photo Metallic - $21.50 sq ft </li>
+                            <li>Silver Metallic Photo Paper - $21.50 sq ft</li>
+                        </ul>
+                    </div>
+                    <div class="w-96 h-auto mt-28 ml-28">
+                        <p class="font-bodytext">When sending image files please send the highest resolution file that you have.  The better the image we start with, the better the final product will look.  We will work with almost any file type but prefer the following:</p>
+                    </div>
+                    <div class="w-96 h-auto mt-48 ml-28 font-bodytext">
+                        <p>Due to copyright laws, we will need proof of artist / photographer consent to print works that are not originating from you.  Exceptions include pieces that are 100+ yrs old or in the public domain.</p>
+                        <p>Print pricing may vary due to supply chain issues and increased prices of our papers, matboards, foam core and frames. Unfortunately these costs must be passed on in order for our business to survive. </p>
+                    </div>
+                </div>
+                <!--Start of second column-->
+                <div class="flex flex-col">
+                    <div class=" w-80 h-auto mt-16 ml-24 font-bodytext">
+                        <p class="">The choice of media for prints is often dictated by the original art work. Oil or acrylic on canvas is often reproduced on canvas to emulate the original as closely as possible. But sometimes an artist will want to offer alternatives to art purchasers and will have prints made on archival papers as well. Watercolor artists usually will choose a watercolor paper with texture similar to the media they used. Photographers often choose a luster photo paper or a smooth matte paper.</p>
+                        <p class="mt-10">*Canvas is coated with a museum grade Giclée finish. This also adds scratch resistance and longevity to your canvas prints*</p>
+                    </div>
+                
+                    <ul class="mt-44 ml-10 list-disc">
+                        <li>300 DPI</li>
+                        <li>.TIF</li>
+                        <li>SRGB Color Profile</li>
+                    </ul>
+                    <div class="mt-36 ml-20">
+                        <h1 class="w-auto h-auto font-secheader text-darkRibbon text-4xl">Disclaimers</h1>
+                    </div>
+                </div>
+            </div>
+{% endblock content %}
