@@ -4,17 +4,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#650505',
-        background: '#FFF8E4',
-        ribbon: '#D68C8C',
-        darkRibbon: '#BE1F3C',
-        tan: '#DBCDC5'
+        'primary': '#650505',
+        'background': '#FFF8E4',
+        'ribbon': '#D68C8C',
+        'darkRibbon': '#BE1F3C',
+        'tan': '#DBCDC5'
       },
       fontFamily: {
-      navtext: ['Inter', 'sans-serif'],
-      bodytext: 'Faustina',
-      secheader: 'Merriweather',
-      buttontext: 'IBM Plex Sans Thai Looped'
+        'navtext': ['Inter', 'sans-serif'],
+        'bodytext': ['Faustina', 'serif'],
+        'secheader': ['Merriweather','serif'],
+        'buttontext': ['IBM Plex Sans Thai Looped','serif']
+      },
+      screens: {
+        'mobile': '320px',
+        'tablet': '768px',
+        'laptop': '1024px',
+        'desktop': '1440px'
       }
     }
 
