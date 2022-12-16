@@ -10,6 +10,34 @@
   <script src="//unpkg.com/alpinejs" defer></script>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('slider', () => ({
+            currentIndex: 1,
+            images: [
+                '/images/WallAPeel.jpeg',
+                '/images/Statue.jpeg',
+                '/images/CustomFraming.jpeg',
+                '/images/DigitalImageEditing.jpeg',
+                '/images/MediaTypes.jpeg'
+            ],
+            back() {
+                if (this.currentIndex > 1) {
+                    this.currentIndex = this.currentIndex - 1;
+                }
+            },
+            next() {
+                if (this.currentIndex < this.images.length) {
+                    this.currentIndex = this.currentIndex + 1;
+                } else if (this.currentIndex <= this.images.length){
+                    this.currentIndex = this.images.length - this.currentIndex + 1
+                }
+            },
+        }))
+    })
+</script>
+
 </head>
 
 <body class="bg-background">
@@ -25,10 +53,14 @@
   </section>
 
 
+
+
   {% block footer %}
     {{ macros_footer::footer()}}
   {% endblock footer %}
 </body>
+
+
 
 
 
