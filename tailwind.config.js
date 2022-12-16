@@ -8,13 +8,13 @@ module.exports = {
         'background': '#FFF8E4',
         'ribbon': '#D68C8C',
         'darkRibbon': '#BE1F3C',
-        'tan': '#DBCDC5'
+        'tan': '#D4C0AD'
       },
       fontFamily: {
         'navtext': ['Inter', 'sans-serif'],
         'bodytext': ['Faustina', 'serif'],
         'secheader': ['Merriweather','serif'],
-        'buttontext': ['IBM Plex Sans Thai Looped','serif']
+        'buttontext': ['IBM Plex Sans','serif']
       },
       screens: {
         'mobile': '320px',
