@@ -7,19 +7,26 @@
 <div class="absolute z-10 w-full h-[190px] top-6 bg-tan"></div>
 
 <div class="pt-32 z-20">
-    <img class="w-[1172px] object-cover h-[337px] relative z-20 mx-auto" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="Vortex" />
+    {% set digital = resize_image(path="images/DigitalImageEditing.jpeg", width=1172, height=337, op="fill") %}
+    <img class="relative z-20 mx-auto" src="{{digital.url}}" alt="a picture of building" />
 </div>
 
-<h1 class="hidden laptop:block absolute z-30 right-32 top-20 text-[60px] text-darkRibbon font-secheader">Digital Image Editing</h1>
+<h1 class="hidden laptop:block tracking-tighter font-light absolute z-30 right-32 top-20 text-[60px] text-darkRibbon font-secheader">Digital Image Editing</h1>
 
- <!-- background decor with ABSOLUTES -->
-<div class="hidden desktop:block absolute z-40 left-20 top-[500px] rotate-180 w-0 laptop:border-t-[66px] border-t-[30px] border-t-background laptop:border-b-[66px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
-<div class="hidden desktop:block absolute z-40 left-5 top-[700px] -rotate-6 h-16 w-16 bg-tan"></div>
-
-<div class="absolute hidden z-40 desktop:block left-30 top-[900px] rotate-30 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
-<div class="absolute hidden z-40 desktop:block left-15 top-[1100px] rotate-12 h-12 w-12 bg-tan"></div>
-<div class="absolute hidden z-40 desktop:block left-45 top-[1250px] rotate-30 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
-  
+ <!-- background decor with ABSOLUTES  [LEFT] -->
+<div class="hidden desktop:block absolute z-40 left-30 top-[500px] rotate-180 w-0 laptop:border-t-[66px] border-t-[30px] border-t-background laptop:border-b-[66px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+<div class="hidden desktop:block absolute z-40 left-5 top-[700px] -rotate-6 h-12 w-12 bg-tan"></div>
+<div class="absolute hidden z-40 desktop:block left-20 top-[850px] rotate-90 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+<div class="absolute hidden z-40 desktop:block left-28 top-[1100px] rotate-12 h-20 w-20 bg-tan"></div>
+<div class="absolute hidden z-40 desktop:block left-16 top-[1250px] -rotate-90 w-0 laptop:border-t-[50px] border-t-[30px] border-t-background laptop:border-b-[50px] border-b-[30px] border-b-background laptop:border-r-[50px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+<div class="absolute hidden z-40 desktop:block left-72 top-[1300px] rotate-0 w-0 laptop:border-t-[30px] border-t-[30px] border-t-background laptop:border-b-[30px] border-b-[30px] border-b-background laptop:border-r-[30px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ 
+ <!-- background decor with ABSOLUTES  [RIGHT] -->
+ <div class="hidden desktop:block absolute z-40 right-30 top-[500px] rotate-180 w-0 laptop:border-t-[66px] border-t-[30px] border-t-background laptop:border-b-[66px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ <div class="hidden desktop:block absolute z-40 right-5 top-[700px] -rotate-6 h-12 w-12 bg-tan"></div>
+ <div class="absolute hidden z-40 desktop:block right-20 top-[850px] -rotate-90 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ <div class="absolute hidden z-40 desktop:block right-28 top-[1100px] rotate-12 h-20 w-20 bg-tan"></div>
+ 
 
 <div class="flex w-full justify-end items-center my-10">
     <div class="h-[54px] hidden laptop:block w-[675px] bg-tan z-40">
@@ -57,10 +64,10 @@
 </div>
 
 <div class="flex flex-col space-y-10 laptop:flex-row items-center justify-center laptop:space-x-28 mx-auto my-10">
-    <button class="shadow-black shadow-md border-none text-[20px] laptop:text-[34px] bg-darkRibbon font-buttontext cursor-pointer hover:bg-red-700 text-white py-1 px-6 border ">
+    <button class="shadow-black shadow-md border-none text-[20px] laptop:text-[34px] bg-darkRibbon font-light font-buttontext cursor-pointer hover:bg-red-700 text-white py-1 px-6 border ">
       See Print Pricing
     </button>
-    <h1 class="font-bodytext w-2/3 laptop:w-[472px] font-semibold text-black text-[15px]">Consultations by appointment are FREE For first time customers.  After our first meeting we do offer consultations for $150 per hour, however if we are discussing your work in regards to an order you are placing this fee may be reduced or waived.
+    <h1 class="font-bodytext w-2/3 laptop:w-[472px] font-bold text-black text-[15px]">Consultations by appointment are FREE For first time customers.  After our first meeting we do offer consultations for $150 per hour, however if we are discussing your work in regards to an order you are placing this fee may be reduced or waived.
 
     </h1>
 </div>
@@ -73,7 +80,7 @@
     </div>
 </div>
 
-<div><h1 class="text-2xl text-center laptop:text-left laptop:pl-[455px] laptop:text-[34px] font-secheader text-darkRibbon p-2 ">Disclaimers</h1></div>
+<div class="z-50"><h1 class="text-2xl opacity-90 text-center laptop:text-left laptop:pl-[455px] laptop:text-[34px] font-secheader text-darkRibbon p-2 ">Disclaimers</h1></div>
 
 <div class="flex font-bodytext items-center justify-center text-[15px] mt-5 mb-20 ">
     <div class="laptop:ml-[430px] w-2/3 laptop:w-[460px]">

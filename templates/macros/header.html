@@ -2,15 +2,12 @@
 
 <header class="bg-primary">
   <nav class="mx-auto max-w-7xl " aria-label="Top">
-    <div class="flex w-full items-center space-x-12 justify-center py-6 ">
+    <div class="flex w-full items-center space-x-2 tablet:space-x-12 justify-center mobile:py-6 ">
       <a href="/">
-        <img
-          class="h-10 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=white"
-          alt=""
-        />
+        {% set logo = resize_image(path="images/Logo.jpg", width=50, height=50, op="fill") %}
+        <img class="z-20 mx-auto" src="{{logo.url}}" alt="a picture of building" />
       </a>
-      <h1 class=" text-xl mobile:2xl tablet:text-3xl laptop:4xl mx-auto font-semibold font-buttontext-400 text-white">Giclée Printing and Framing of New England</h1>
+      <h1 class=" text-md mobile:2xl tablet:text-3xl laptop:4xl mx-auto font-semibold font-buttontext-400 text-white">Giclée Printing and Framing of New England</h1>
      
     </div>
     <!-- <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
@@ -23,13 +20,13 @@
         <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Company</a>
       </div> -->
       <div
-      class="container flex w-full items-center justify-between border-b py-4"
+      class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4"
     >
       <div class="flex items-center mx-auto">
         
-        <div class="hidden space-x-40 lg:block">
+        <div class="space-x-40 ">
           <a
-            href="/blog"
+            href="/"
             class="text-sm font-navtext-400 text-white hover:text-indigo-50"
             >Home</a
           >

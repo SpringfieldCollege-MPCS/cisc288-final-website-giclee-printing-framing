@@ -9,6 +9,7 @@
   <title>MyBlog</title>
   <script src="//unpkg.com/alpinejs" defer></script>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 
 <body class="bg-background">
@@ -18,7 +19,7 @@
   {% endblock header %}
 
   <section>
-    <div class="relative container max-w-[1440px] mx-auto">
+    <div class="container max-w-[1440px] mx-auto relative">
       {% block content %} {% endblock %}
     </div>
   </section>
