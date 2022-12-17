@@ -8,7 +8,8 @@ module.exports = {
         'background': '#FFF8E4',
         'ribbon': '#D68C8C',
         'darkRibbon': '#BE1F3C',
-        'tan': '#D4C0AD'
+        'tan': '#D4C0AD',
+        'textcolor': '#2E180F'
       },
       fontFamily: {
         'navtext': ['Inter', 'sans-serif'],
