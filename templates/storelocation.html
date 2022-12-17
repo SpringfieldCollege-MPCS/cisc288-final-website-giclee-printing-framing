@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="p-5 text-center tracking-tighter font-light text-2xl tablet:text-4xl text-darkRibbon font-secheader">Store Location</h1>
+
+<!-- major flex -->
+<div class="flex flex-col space-y-5 tablet:flex-row items-center justify-around desktop:justify-between mb-10">
+    <!-- first flex col -->
+    <div class="flex flex-col w-2/3 justify-center items-center space-y-8 tablet:w-2/5">
+        {% set Locationboard = resize_image(path="images/Sign2.jpg", width=404, height=372, op="fill") %}
+        <img class="border-black border-4 mx-auto" src="{{Locationboard.url}}" alt="a picture of building" />
+
+        <h1 class=" text-center tracking-tighter font-light text-2xl tablet:text-4xl text-darkRibbon font-secheader">Directions</h1>
+
+        <div class="flex text:md tablet:text-xl font-bodytext flex-col justify-center items-center">
+            <div class="bg-storebg border-y-2 border-y-darkRibbon w-full p-2"><p class="text-center">Travel onto Shawinigan Dr. (Chicopee Falls)</p></div>
+            <div class="bg-storebg w-full p-2"><p class="text-center">Turn Right onto West Street follow the street down</p></div>
+            <div class="bg-[#DBCDC5] border-y-2  border-y-darkRibbon w-full p-2"><p class="text-center">Driving through West Street you will see a huge building between a river and a canal. (Chicopee River)</p></div>
+            <div class="bg-[#DBCDC5]  w-full p-2"><p class="text-center">Drive all the way down towards a plaza</p></div>
+            <div class="bg-[#DBC7B0] border-y-2  border-y-darkRibbon w-full p-2"><p class="text-center">Their will be a sign that says Indian Orchard Mills on the left side</p></div>
+            <div class="bg-[#DBC7B0]  w-full p-2"><p class="text-center">Their will be a huge parking lot and once you reach the building. Their will be a series of door numbers. </p></div>
+            <div class="bg-[#DBC7B0] border-y-2  border-y-darkRibbon w-full p-2"><p class="text-center">Drive towards door number 18.</p></div>
+            <div class="bg-primary border-y-2 text-white  border-y-darkRibbon w-full p-2"><p class="text-center">Once you reach door 18 the doors will be locked. So you would have call Lisa in order to get inside. Once unlocked their will be 3 flights of stairs. Their will be signs that guide you towards the frame store.</p></div>
+        </div>
+        
+        <button class="shadow-black w-4/5 text-center shadow-md border-none text:2xl tablet:text-4xl laptop:text-[34px] bg-darkRibbon font-light font-buttontext cursor-pointer hover:bg-red-700 text-white py-1 px-6 ">
+            For More Help Contact Us
+        </button>
+
+        {% set stairs = resize_image(path="images/Stairs.jpg", width=404, height=372, op="fill") %}
+        <img class="border-black border-4 mx-auto" src="{{stairs.url}}" alt="a picture of building" />
+
+        <div class="w-2/3 text:md tablet:text-2xl">
+            <p>We are operating by appointment only so please contact us to schedule.  We also offer customized services to meet your needs if you are unable to visit us in our shop.</p>
+        </div>
+        
+    </div>
+
+    <!-- Second flex col -->
+    <div class="flex flex-col w-2/3 justify-center items-center bg-storebg space-y-8 tablet:w-2/5">
+        <h1 class=" text-center pt-12 font-light text-2xl tablet:text-4xl text-white font-secheader">Welcome!</h1>
+
+        <div class="w-2/3 text-md  tablet:text-xl">
+            <p>
+                Logo for Giclée Printing & Framing of New England
+                Giclée Printing & Framing of New England
+                Specialty Print & Frame Shop <br><br>
+                Serving all of New England, the United States & Beyond </div>
+
+        {% set door = resize_image(path="images/Door.jpg", width=500, height=360, op="fill") %}
+        <img class="w-full h-[360px]  desktop:pt-8" src="{{door.url}}" alt="a picture of building" />
+
+        {% set sign = resize_image(path="images/Sign.jpg", width=500, height=360, op="fill") %}
+        <img class="w-full h-[360px] " src="{{sign.url}}" alt="a picture of building" />
+
+
+        <div class="w-2/3 pb-12 desktop:pt-8 text:md tablet:text-xl">
+            <p>Unless picking up, please park across the street in the larger lot and walk across one of the footbridges.  Our shop is located closest to door #18 however you can find us by going in either door #18 or #19.  The elevator is commercially operated so ring buzzer if no one is there.</p>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- first horizontal line -->
+<div class="hidden absolute top-[450px] right-0 desktop:flex flex-col flex-wrap items-end justify-center mt-20">
+    <div class="flex items-center justify-center">
+        <div class=" h-0 rotate-180 w-0 laptop:border-t-[10px] border-t-[6px] border-t-background laptop:border-b-[10px] border-b-[6px] border-b-background laptop:border-r-[10px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+        <div class=" h-[2px] w-[700px]  laptop:h-[3px] border-none bg-darkRibbon"></div>
+    </div>
+</div>
+
+<!-- second horizontal line -->
+<div class="hidden absolute top-[1250px] right-0 desktop:flex flex-col flex-wrap items-end justify-center mt-20">
+    <div class="flex items-center justify-center">
+        <div class=" h-0 rotate-180 w-0 laptop:border-t-[10px] border-t-[6px] border-t-background laptop:border-b-[10px] border-b-[6px] border-b-background laptop:border-r-[10px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+        <div class=" h-[2px] w-[700px]  laptop:h-[3px] border-none bg-darkRibbon"></div>
+    </div>
+</div>
+
+<!-- middle arrow -->
+<div class="hidden absolute top-[820px] right-[650px] desktop:flex flex-col flex-wrap items-end justify-center mt-20">
+    <div class="flex items-center justify-center">
+        <div class=" h-8 w-[100px]  border-none bg-darkRibbon"></div>
+        <div class=" h-0 rotate-180 w-0  border-t-[30px] border-t-background  border-b-[30px] border-b-background  border-r-[30px] border-r-darkRibbon bg-darkRibbon"></div>
+        
+    </div>
+</div>
+
+<!-- DECORS in the middle after desktop breakpoint -->
+<div class="hidden desktop:block absolute z-40 left-[620px] top-[250px] rotate-180 w-0 laptop:border-t-[66px] border-t-[30px] border-t-background laptop:border-b-[66px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+<div class="hidden desktop:block absolute z-40 left-[650px] top-[500px] -rotate-6 h-12 w-12 bg-tan"></div>
+<div class="absolute hidden z-40 desktop:block left-[690px] top-[620px] rotate-90 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+<div class="absolute hidden z-40 desktop:block left-[630px] top-[1100px] rotate-12 h-20 w-20 bg-tan"></div>
+<div class="absolute hidden z-40 desktop:block left-[680px] top-[1500px] -rotate-90 w-0 laptop:border-t-[50px] border-t-[30px] border-t-background laptop:border-b-[50px] border-b-[30px] border-b-background laptop:border-r-[50px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+<div class="absolute hidden z-40 desktop:block left-[600px] top-[1340px] rotate-0 w-0 laptop:border-t-[30px] border-t-[30px] border-t-background laptop:border-b-[30px] border-b-[30px] border-b-background laptop:border-r-[30px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ 
+
+
+
+{% endblock content %}
