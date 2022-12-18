@@ -6,7 +6,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  <title>Giclée Printing & Framing of New England</title>
   <script src="//unpkg.com/alpinejs" defer></script>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -16,11 +16,11 @@
         Alpine.data('slider', () => ({
             currentIndex: 1,
             images: [
-                '/images/WallAPeel.jpeg',
-                '/images/Statue.jpeg',
-                '/images/CustomFraming.jpeg',
-                '/images/DigitalImageEditing.jpeg',
-                '/images/MediaTypes.jpeg'
+                '{{config.base_url}}/images/WallAPeel.jpeg',
+                '{{config.base_url}}/images/Statue.jpeg',
+                '{{config.base_url}}/images/CustomFraming.jpeg',
+                '{{config.base_url}}/images/DigitalImageEditing.jpeg',
+                '{{config.base_url}}/images/MediaTypes.jpeg'
             ],
             back() {
                 if (this.currentIndex > 1) {
