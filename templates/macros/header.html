@@ -1,13 +1,19 @@
 {% macro header() %}
 
 <header class="bg-primary z-30">
+
   <nav x-data="{ isOpen: false }" class="mx-auto relative max-w-7xl ">
+
+    <!-- Logo, Title and Hamburger icon -->
     <div class="flex w-full items-center space-x-2 tablet:space-x-12 justify-center mobile:py-6 ">
+
       <a href="/">
         {% set logo = resize_image(path="images/Logo.jpg", width=50, height=50, op="fill") %}
         <img class="z-20 mx-auto " src="{{logo.url}}" alt="a picture of building" />
       </a>
+
       <h1 class=" text-base mobile:2xl tablet:text-3xl laptop:4xl text-center mx-auto font-semibold font-buttontext-400 text-white">Giclée Printing and Framing of New England</h1>
+      
       <button @click="isOpen = !isOpen" type="submit">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white lg:hidden" fill="none"
             viewBox="0 0 24 24" stroke="currentColor">
@@ -15,8 +21,10 @@
                 d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+
     </div>
    
+    <!-- section of nav links -->
     <div
       class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4">
       <div class="flex items-center mx-auto">
@@ -24,33 +32,34 @@
         <div class="space-x-40 ">
           <a
             href="/"
-            class="text-sm font-navtext text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Home</a
           >
           <a
             href="/productsservices"
-            class="text-sm font-navtext text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Product & Services</a
           >
           <a
             href="/pricing"
-            class="text-sm font-navtext text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Print Pricing</a
           >
           <a
             href="/contact"
-            class="text-sm font-navtext text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Contact Us</a
           >
           <a
             href="/blogpage"
-            class="text-sm font-navtext text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Blog</a
           >
         </div>
       </div> 
     </div>
 
+    <!-- Alpine JS implementation for small screens' navbar -->
     <div class="z-50 mobile-navbar">
       <!-- navbar wrapper -->
       <div class="w-full bg-background shadow-xl" x-show="isOpen"
@@ -59,14 +68,14 @@
             <div class="bg-darkRibbon p-2" >
               <a
               href="/"
-              class=" font-navtext text-background hover:text-indigo-50"
+              class=" font-navtext text-backgroune"
               >Home</a>
             </div>
 
             <div class="bg-darkRibbon p-2" >
             <a
               href="/productsservices"
-              class="font-navtext text-background hover:text-indigo-50"
+              class="font-navtext text-backgroune"
               >Product & Services</a
             >
           </div>
@@ -74,18 +83,16 @@
           <div class="bg-darkRibbon p-2" >
             <a
               href="/pricing"
-              class="font-navtext text-background hover:text-indigo-50"
+              class="font-navtext text-backgroune"
               >Print Pricing</a
             >
             </div>
-
-
 
             <div class="bg-darkRibbon p-2" >
 
             <a
               href="/contact"
-              class=" font-navtext text-background hover:text-indigo-50"
+              class=" font-navtext text-backgroune"
               >Contact Us</a
             >
           </div>
@@ -94,7 +101,7 @@
           <div class="bg-darkRibbon p-2 " >
             <a
               href="/blogpage"
-              class="font-navtext text-background hover:text-indigo-50"
+              class="font-navtext text-backgroune"
               >Blog</a
             >
           </div>

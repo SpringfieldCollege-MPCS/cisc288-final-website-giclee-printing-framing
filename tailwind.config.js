@@ -9,7 +9,8 @@ module.exports = {
         'ribbon': '#D68C8C',
         'darkRibbon': '#BE1F3C',
         'tan': '#D4C0AD',
-        'textcolor': '#2E180F'
+        'textcolor': '#2E180F',
+        'storebg': '#D68C8C'
       },
       fontFamily: {
         'navtext': ['Inter', 'sans-serif'],
