@@ -21,11 +21,11 @@
             <div class="bg-[#DBC7B0] border-y-2  border-y-darkRibbon w-full p-2"><p class="text-center">Their will be a sign that says Indian Orchard Mills on the left side</p></div>
             <div class="bg-[#DBC7B0]  w-full p-2"><p class="text-center">Their will be a huge parking lot and once you reach the building. Their will be a series of door numbers. </p></div>
             <div class="bg-[#DBC7B0] border-y-2  border-y-darkRibbon w-full p-2"><p class="text-center">Drive towards door number 18.</p></div>
-            <div class="bg-primary border-y-2 text-white  border-y-darkRibbon w-full p-2"><p class="text-center">Once you reach door 18 the doors will be locked. So you would have call Lisa in order to get inside. Once unlocked their will be 3 flights of stairs. Their will be signs that guide you towards the frame store.</p></div>
+            <div class="bg-primary border-b-2 text-white  border-y-darkRibbon w-full p-2"><p class="text-center">Once you reach door 18 the doors will be locked. So you would have call Lisa in order to get inside. Once unlocked their will be 3 flights of stairs. Their will be signs that guide you towards the frame store.</p></div>
         </div>
         
-        <button class="shadow-black w-4/5 text-center shadow-md border-none text:2xl tablet:text-4xl laptop:text-[34px] bg-darkRibbon font-light font-buttontext cursor-pointer hover:bg-red-700 text-white py-1 px-6 ">
-            For More Help Contact Us
+        <button  class="shadow-black w-4/5 text-center shadow-md border-none text:2xl tablet:text-4xl laptop:text-[34px] bg-darkRibbon font-light font-buttontext cursor-pointer text-white py-1 px-6 ">
+            <a href="/contact">For More Help Contact Us</a>
         </button>
 
         {% set stairs = resize_image(path="images/Stairs.jpg", width=404, height=372, op="fill") %}
@@ -49,10 +49,10 @@
                 Serving all of New England, the United States & Beyond </div>
 
         {% set door = resize_image(path="images/Door.jpg", width=500, height=360, op="fill") %}
-        <img class="w-full h-[360px]  desktop:pt-8" src="{{door.url}}" alt="a picture of building" />
+        <img class="w-full h-[200px] tablet:h-[360px]  desktop:pt-8" src="{{door.url}}" alt="a picture of building" />
 
         {% set sign = resize_image(path="images/Sign.jpg", width=500, height=360, op="fill") %}
-        <img class="w-full h-[360px] " src="{{sign.url}}" alt="a picture of building" />
+        <img class="w-full h-[200px] tablet:h-[360px] " src="{{sign.url}}" alt="a picture of building" />
 
 
         <div class="w-2/3 pb-12 desktop:pt-8 text:md tablet:text-xl">
