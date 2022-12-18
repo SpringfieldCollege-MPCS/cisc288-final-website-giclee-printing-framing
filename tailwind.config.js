@@ -22,6 +22,11 @@ module.exports = {
         'tablet': '768px',
         'laptop': '1024px',
         'desktop': '1440px'
+      },
+      rotate: {
+        '67.5': '67.5deg',
+        '135' : '135deg',
+        '225': '225deg'
       }
     }
 

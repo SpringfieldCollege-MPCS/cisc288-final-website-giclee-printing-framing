@@ -1,7 +1,27 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="h-96 w-full"></div>
+<div class="h-96 w-full">
+  {% set pricinghead = resize_image(path="images/PricingCrop.jpg", width=1500, height=417, op="fill") %}
+  <img class="w-full h-96 z-20 mx-auto" src="{{pricinghead.url}}" alt="Frames and plant" />
+</div>
+<!--triangles
+ largest <div class="hidden desktop:block absolute z-40 left-96 top-[2000px] rotate-225 w-0 laptop:border-t-[66px] border-t-[30px] border-t-background laptop:border-b-[66px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ med/big <div class="absolute hidden z-40 desktop:block left-20 top-[850px] rotate-90 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ med tri <div class="absolute hidden z-40 desktop:block left-16 top-[1250px] -rotate-90 w-0 laptop:border-t-[50px] border-t-[30px] border-t-background laptop:border-b-[50px] border-b-[30px] border-b-background laptop:border-r-[50px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ small tri <div class="absolute hidden z-40 desktop:block left-72 top-[1300px] rotate-0 w-0 laptop:border-t-[30px] border-t-[30px] border-t-background laptop:border-b-[30px] border-b-[30px] border-b-background laptop:border-r-[30px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ -->
+ <!-- background decor with ABSOLUTES  [LEFT] -->
+<!--Largest Tri-->
+ <div class="absolute hidden z-40 desktop:block left-64 top-[1950px] rotate-12 h-20 w-20 bg-tan"></div>
+ <div class="hidden desktop:block absolute z-40 left-96 top-[2150px] rotate-225 w-0 laptop:border-t-[66px] border-t-[30px] border-t-background laptop:border-b-[66px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ <div class="absolute hidden z-40 desktop:block left-[600px] top-[2300px] rotate-67.5 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ <div class="hidden desktop:block absolute z-40 left-72 top-[2400px] -rotate-6 h-12 w-12 bg-tan"></div>
+
+<!-- background decor with ABSOLUTES [RIGHT]-->
+<div class="hidden desktop:block absolute z-40 right-64 top-[450px] -rotate-12 h-16 w-16 bg-tan"></div>
+<div class="absolute hidden z-40 desktop:block right-24 top-[600px] rotate-45 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+<div class="absolute hidden z-40 desktop:block right-24 top-[1000px] rotate-12 h-20 w-20 bg-tan"></div>
 <div class="flex flex-col">
   <div class="flex flex-row h-auto w-auto">
     <!-- 1 of the 2 big colums under picture-->
@@ -10,248 +30,256 @@
     <div class="w-auto h-auto bg-background flex flex-col">
       <!-- start of first big flex row section-->
       <div class="flex flex-row h-auto w-auto">
-        <div class="flex flex-col h-auto w-auto">
-          <p class=" w-96 ml-36 mt-24 font-bodytext text-base">Giclée prints are made using acid free archival papers and high dynamic range pigment inks.  Each print should last at least 100 yrs and should stand up to generational passing down.  
+        <div class="flex flex-col h-auto w-auto ml-20">
+          <h1 class="font-secheader text-darkRibbon text-6xl ml-40 mt-10 ">Prints</h1>
+          <p class=" w-96 ml-36 mt-6 font-bodytext text-base">Giclée prints are made using acid free archival papers and high dynamic range pigment inks.  Each print should last at least 100 yrs and should stand up to generational passing down.  
           Put simply, pigment-based particles form a thicker layer on a substrate than dyes.
           <p class=" w-80 ml-36 mt-6 font-bodytext text-base">Prints are offered with or without a .5” white border.  If the end goal is matting and framing then we would include the .5” 
           border and price according to the media size (image size plus border).  1-3 day turnaround.</p>
           <p class=" w-72 ml-36 mt-8 font-bodytext text-base">Pricing is distubuted into groups of prints, excluding 1-3 prints of the same size.</p>
         </div>
-        <div class="w-auto bg-background">Picture</div>
+        <div class="w-auto bg-background ml-24 mt-24">
+          {% set statue = resize_image(path="images/StatueCrop.jpg", width=250, height=310, op="fill") %}
+          <img class="w-[250px] h-[308px] z-20 mx-auto" src="{{statue.url}}" alt="Frames and plant" />
+        </div>
       </div> 
       <!-- start of grid section moving onto the second large flex row section-->
-      <div class="flex flex-row w-auto h-auto bg-background ">
-      <div class="h-auto grid grid-cols-3 gap-x-32 gap-y-24 mt-16 ml-16 mr-20">
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">8" x 10"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$14.78 each</p>
+      <div class="flex flex-row w-auto h-auto bg-background ml-20">
+        <div class="flex flex-col w-auto h-auto">
+          <h1 class="font-secheader text-darkRibbon text-6xl desktop:ml-20 mt-10 ">Prices By Frame Size (in inches)</h1>
+          <div class="h-auto grid grid-cols-3 gap-x-32 gap-y-24 mt-16 ml-16 mr-20">
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">8" x 10"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$14.78 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$14.04</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$13.03</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$12.56</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$11.82</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$14.04</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">10" x 10"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$18.07 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$17.17</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$16.26</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$15.35</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$11.82</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$13.03</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">11" x 14"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$26.88 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$25.53</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$24.19</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$22.85</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$21.50</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$12.56</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">12" x 12"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$25.23 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$23.97</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$22.71</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$21.45</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$20.18</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$11.82</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">12" x 16"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$33.00 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$31.35</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$29.70</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$28.05</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$26.40</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">10" x 10"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$18.07 each</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">16" x 16"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$43.15 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$40.99</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$38.84</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$36.68</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$34.52</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$17.17</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">16" x 20"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$53.80 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$50.64</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$47.97</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$45.31</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$42.64</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$16.26</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">18" x 18"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$53.90 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$51.21</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$48.51</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$45.81</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$43.12</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$15.35</p>
+            <div class="w-44 text-center mx-auto">
+              <h1 class="text-darkRibbon text-xl font-extrabold">18" x 24"</h1>
+              <div class="flex flex-col gap-y-5 mt-5">
+                <div class="flex flex-row justify-between font-bodytext text-base">
+                  <p>1-3</p>
+                  <p>$70.92 each</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>4-10</p>
+                  <p>$67.37</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>11-25</p>
+                  <p>$63.83</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>26-50</p>
+                  <p>$60.28</p>
+                </div>
+                <div class="flex flex-row justify-between font-bodytext text-base pr-8">
+                  <p>51-100</p>
+                  <p>$56.74</p>
+                </div>
+              </div>
             </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$11.82</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">11" x 14"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$26.88 each</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$25.53</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$24.19</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$22.85</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$21.50</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">12" x 12"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$25.23 each</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$23.97</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$22.71</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$21.45</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$20.18</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">12" x 16"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$33.00 each</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$31.35</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$29.70</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$28.05</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$26.40</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">16" x 16"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$43.15 each</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$40.99</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$38.84</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$36.68</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$34.52</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">16" x 20"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$53.80 each</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$50.64</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$47.97</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$45.31</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$42.64</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">18" x 18"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$53.90 each</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$51.21</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$48.51</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$45.81</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$43.12</p>
-            </div>
-          </div>
-        </div>
-        <div class="w-44 text-center mx-auto">
-          <h1 class="text-darkRibbon text-xl font-extrabold">18" x 24"</h1>
-          <div class="flex flex-col gap-y-5 mt-5">
-            <div class="flex flex-row justify-between font-bodytext text-base">
-              <p>1-3</p>
-              <p>$70.92 each</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>4-10</p>
-              <p>$67.37</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>11-25</p>
-              <p>$63.83</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>26-50</p>
-              <p>$60.28</p>
-            </div>
-            <div class="flex flex-row justify-between font-bodytext text-base pr-8">
-              <p>51-100</p>
-              <p>$56.74</p>
-            </div>
-          </div>
-        </div>
-        <!--End of grid section-->
 
+          <!--End of grid section-->
+
+          </div>
+        </div>
       </div>
-      </div>
-      <div class="flex flex-row w-auto h-auto bg-background font-bodytext text-base">
+      <div class="flex flex-row w-auto h-auto bg-background font-bodytext text-base mt-10">
         <p class="w-96 ml-40 mt-5 ">
           When sending image files please send the highest resolution file that you have.  
           The better the image we <br>start with, the better the final product will look.  
@@ -263,7 +291,10 @@
         </ul>
       </div>
       <div class="flex flex-row w-auto h-auto mb-20 bg-background">
-        <h1 class="ml-80 mt-24 font-secheader text-4xl text-darkRibbon">Disclaimers</h1>
+        <h1 class="ml-80 mt-24 font-secheader text-4xl text-darkRibbon">Disclaimers
+          <div class="absolute -mt-14 -ml-5 h-0 rotate-180 w-0 laptop:border-t-[10px] border-t-[6px] border-t-background laptop:border-b-[10px] border-b-[6px] border-b-background laptop:border-r-[10px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+          <div class="absolute -mt-12 -ml-3 h-[2px] w-[300px]  laptop:h-[3px] laptop:w-[900px] border-none bg-darkRibbon"></div>
+        </h1>
         <p class="mt-32 ml-10 w-96 font-bodytext text-base">Due to copyright laws, we will need proof of artist / photographer consent to
           print works that are not <br> originating from you.  Exceptions include pieces that are 100+ yrs old or in the public domain.
           <br> Print pricing may vary due to supply chain issues and increased prices of our papers, matboards, foam core and frames. 
