@@ -5,209 +5,292 @@
   <meta charset="utf-8">
   <title>MyBlog</title>
   <script src="//unpkg.com/alpinejs" defer></script>
-  <link rel="stylesheet" href="https://example.com/styles/style.css">
+  <link rel="stylesheet" href="https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('slider', () => ({
+            currentIndex: 1,
+            images: [
+                '/images/WallAPeel.jpeg',
+                '/images/Statue.jpeg',
+                '/images/CustomFraming.jpeg',
+                '/images/DigitalImageEditing.jpeg',
+                '/images/MediaTypes.jpeg'
+            ],
+            back() {
+                if (this.currentIndex > 1) {
+                    this.currentIndex = this.currentIndex - 1;
+                }
+            },
+            next() {
+                if (this.currentIndex < this.images.length) {
+                    this.currentIndex = this.currentIndex + 1;
+                } else if (this.currentIndex <= this.images.length){
+                    this.currentIndex = this.images.length - this.currentIndex + 1
+                }
+            },
+        }))
+    })
+</script>
+
 </head>
 
 <body class="bg-background">
 
   
     
-<!-- <header class="bg-slate-600">
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-    <div
-      class="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none"
-    >
-      <div class="flex items-center">
-        <a href="/">
-          <span class="sr-only">CISC288</span>
-          <img
-            class="h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=white"
-            alt=""
-          />
-        </a>
-        <div class="ml-10 hidden space-x-8 lg:block">
-          <a
-            href="/blog"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Blog</a
-          >
 
-          <a
-            href="/testimonial"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Testimonials</a
-          >
+<header class="bg-primary z-30">
 
-          <a
-            href="/art"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Art</a
-          >
+  <nav x-data="{ isOpen: false }" class="mx-auto relative max-w-7xl ">
 
-          <a
-            href="#"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Articles</a
-          >
+    <!-- Logo, Title and Hamburger icon -->
+    <div class="flex w-full items-center space-x-2 tablet:space-x-12 justify-center mobile:py-6 ">
 
+      <a href="/">
+        
+        <img class="z-20 mx-auto " src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing&#x2F;processed_images&#x2F;7ebd96b20e54486a00.jpg" alt="a picture of building" />
+      </a>
 
-        </div>
-      </div>
-      <div class="ml-10 space-x-4">
-         <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-slate-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
-          >Join</a
-        > 
-        <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-slate-600 hover:bg-indigo-50"
-          >Join
-          </a>
-      </div>
+      <h1 class=" text-base mobile:2xl tablet:text-3xl laptop:4xl text-center mx-auto font-semibold font-buttontext-400 text-white">Giclée Printing and Framing of New England</h1>
+      
+      <button @click="isOpen = !isOpen" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white lg:hidden" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
     </div>
-     <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Solutions</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Pricing</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Docs</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Company</a>
-      </div> 
-  </nav>
-</header>   -->
-
-<header class="bg-primary">
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8" aria-label="Top">
+   
+    <!-- section of nav links -->
     <div
-      class="flex w-full items-center justify-between py-6 "
-    >
-    <a href="/">
-      <img
-        class="h-10 w-auto"
-        src="https://tailwindui.com/img/logos/mark.svg?color=white"
-        alt=""
-      />
-    </a>
-    <h1 class="text-xl mobile:2xl tablet:text-3xl laptop:4xl mx-auto font-semibold font-buttontext-400 text-white">Giclée Printing and Framing of New England</h1>
-      
-      
-      
-    </div>
-    <!-- <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Solutions</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Pricing</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Docs</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Company</a>
-      </div> -->
-      <div
-      class="container flex w-full items-center justify-between border-b border-indigo-500 py-4 lg:border-none"
-    >
+      class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4">
       <div class="flex items-center mx-auto">
         
-        <div class="hidden space-x-40 lg:block">
+        <div class="space-x-40 ">
           <a
-            href="/blog"
-            class="text-sm font-navtext-400 text-white hover:text-indigo-50"
+            href="/"
+            class="text-sm font-navtext text-white"
             >Home</a
           >
-
           <a
             href="/productsservices"
-            class="text-sm font-navtext-400 text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Product & Services</a
           >
-
           <a
             href="/pricing"
-            class="text-sm font-navtext-400 text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Print Pricing</a
           >
-
           <a
             href="/contact"
-            class="text-sm font-navtext-400 text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Contact Us</a
           >
-
           <a
             href="/blogpage"
-            class="text-sm font-navtext-400 text-white hover:text-indigo-50"
+            class="text-sm font-navtext text-white"
             >Blog</a
           >
-
-
         </div>
-      </div>
-      
+      </div> 
     </div>
+
+    <!-- Alpine JS implementation for small screens' navbar -->
+    <div class="z-50 mobile-navbar">
+      <!-- navbar wrapper -->
+      <div class="w-full bg-background shadow-xl" x-show="isOpen"
+          @click.away=" isOpen = false">
+          <div class="flex flex-col text-center text-xs font-navtext tablet:text-lg space-y-[2px]">
+            <div class="bg-darkRibbon p-2" >
+              <a
+              href="/"
+              class=" font-navtext text-backgroune"
+              >Home</a>
+            </div>
+
+            <div class="bg-darkRibbon p-2" >
+            <a
+              href="/productsservices"
+              class="font-navtext text-backgroune"
+              >Product & Services</a
+            >
+          </div>
+
+          <div class="bg-darkRibbon p-2" >
+            <a
+              href="/pricing"
+              class="font-navtext text-backgroune"
+              >Print Pricing</a
+            >
+            </div>
+
+            <div class="bg-darkRibbon p-2" >
+
+            <a
+              href="/contact"
+              class=" font-navtext text-backgroune"
+              >Contact Us</a
+            >
+          </div>
+
+
+          <div class="bg-darkRibbon p-2 " >
+            <a
+              href="/blogpage"
+              class="font-navtext text-backgroune"
+              >Blog</a
+            >
+          </div>
+          </div>
+      </div>
+  </div>
+
   </nav>
 </header>
+
+
+
+
 
 
   
 
   <section>
-    <div class="">
+    <div class="container max-w-[1440px] mx-auto relative">
       
-<div>Wall A Peel</div>
+
+
+<!-- big horizontal tan bar -->
+<div class="hidden desktop:block absolute z-0 w-[195px] h-[1452px] -top-10 bg-tan"></div>
+
+<!-- DECORS on the sides -->
+<div class="hidden desktop:block absolute z-40 right-5 top-[600px] -rotate-6 h-16 w-16 bg-tan"></div>
+ <div class="absolute hidden z-10 desktop:block right-0 top-[850px] rotate-90 w-0 laptop:border-t-[60px] border-t-[30px] border-t-background laptop:border-b-[60px] border-b-[30px] border-b-background laptop:border-r-[60px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+ <div class="absolute hidden z-40 desktop:block right-16 top-[1050px] rotate-12 h-20 w-20 bg-tan"></div>
+ <div class="absolute hidden z-40 desktop:block right-56 top-[1200px] rotate-180 w-0 laptop:border-t-[20px] border-t-[30px] border-t-background laptop:border-b-[20px] border-b-[30px] border-b-background laptop:border-r-[20px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+
+<!-- Title -->
+ <h1 class="hidden laptop:block tracking-tighter font-light absolute z-30 left-48 top-32 text-[60px] text-darkRibbon font-secheader">Wall A Peel</h1>
+
+<!-- Message bar -->
+<div class="hidden laptop:flex w-full justify-end items-center my-10">
+    <div class=" w-[900px] h-[95px] bg-tan z-40">
+        <h1 class="w-[700px] h-[95px] py-2 text-right pr-5 text-[26px] align-middle font-secheader text-black ">Don’t let your office or building become a liability with heavy frames that can do damage!</h1>
+    </div>
+</div>
+
+<!-- title for smaller screens -->
+<h1 class="block p-5 absolute left-4 laptop:hidden text-left tracking-tighter font-light z-30  text-[36px] text-darkRibbon font-secheader">Wall A Peel</h1>
+
+<!-- banner image -->
+<div class="pt-0 laptop:pt-8 z-20">
+    
+    <img class="relative z-20 mx-auto" src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing&#x2F;processed_images&#x2F;45aca1b879d3b9fd00.jpg" alt="a picture of building" />
+</div>
+
+<!-- content area -->
+<div class="flex flex-col space-y-10 laptop:flex-row laptop:justify-between my-10 laptop:my-20 ">
+
+    <div class="flex w-full px-5 laptop:w-3/5 desktop:pl-[215px] flex-col items-center justify-start space-y-10 text-sm tablet:text-base mx-auto font-bodytext">
+    
+        <div class="w-full px-5">
+            <p>What makes this adhesive backed, printed fabric appealing is it’s amazing ability to stick to any smooth surface and be re-positioned many times without causing damage to walls or furniture.  Goes on clean and comes off cleanly to stick again and again.  Rotate your photographic quality prints to make any room look fresh and new.  Wall-A-Peel does not rip, stretch or wrinkle, is safe for any wall and meets fire safety standards.</p>
+        </div>
+        <div class="w-full flex items-center justify-center space-x-10 ">
+            <div class="h-[10px] w-[10px] tablet:h-[20px] tablet:w-[20px] laptop:h-[40px] laptop:w-[40px] bg-darkRibbon rounded-full"></div>
+            <div class="h-[10px] w-[10px] tablet:h-[20px] tablet:w-[20px] laptop:h-[40px] laptop:w-[40px] bg-darkRibbon rounded-full"></div>
+            <div class="h-[10px] w-[10px] tablet:h-[20px] tablet:w-[20px] laptop:h-[40px] laptop:w-[40px] bg-darkRibbon rounded-full"></div>
+    
+        </div>
+        <div class="w-full px-7 ">
+            <div class="z-50"><h1 class="text-2xl mb-3 opacity-90 text-left laptop:text-[34px] font-secheader text-darkRibbon p-2 ">To calculate price:</h1></div>
+            <ul class="list-disc">
+                <li class="mb-2">Length (inches) x Width (inches) = Size in square inches</ol>
+                <li class="mb-2">Take the size in square inches and divide by 144 = size in square feet</ol>
+                <li> Take the size in square feet and multiply by 16</ol>  
+            </ul>
+        </div>
+    
+    </div>
+
+    <div class="flex flex-col font-bodytext items-center justify-start space-y-8 ">
+        <div class="w-full text-center px-5 ">
+            <h3 class="mb-5 font-bold">Wall A Peel - $19 per square ft</h3>
+            <p class="mb-3" >*Wall-A-Peel max size is 42″inches by 100′ ft*  </p>
+            <p>Please contact us for any questions and <br>we will offer discount based on job size</p></p> 
+        </div>
+        <div class="hidden laptop:flex items-center justify-center">
+            <div class=" h-0 -rotate-180 w-0 laptop:border-t-[10px] border-t-[6px] border-t-background laptop:border-b-[10px] border-b-[6px] border-b-background laptop:border-r-[10px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+            <div class=" h-[2px] w-[300px]  laptop:h-[3px] laptop:w-[500px] border-none bg-darkRibbon"></div>
+        </div>
+        <button class="shadow-black w-[200px] h-[50px] laptop:w-[310px] laptop:h-[68px] shadow-md border-none text-[20px] laptop:text-[34px] bg-darkRibbon font-light font-buttontext cursor-pointer text-white py-1 px-6 border ">
+            <a href="/pricing">See Print Pricing</a>
+          </button>
+    </div>
+
+</div>
+
+
+<!-- Arrow -->
+<div class="hidden laptop:flex flex-col flex-wrap items-start justify-center">
+    <div class="flex items-center justify-center">
+        <div class=" h-[2px] w-[300px]  laptop:h-[3px] laptop:w-[1000px] border-none bg-darkRibbon"></div>
+        <div class=" h-0 rotate-0 w-0 laptop:border-t-[10px] border-t-[6px] border-t-background laptop:border-b-[10px] border-b-[6px] border-b-background laptop:border-r-[10px] border-r-[6px] border-r-red-800 bg-darkRibbon"></div>
+    </div>
+</div>
+
+<!-- Disclaimer section -->
+<div class="z-50 mb-5 tablet:mt-10 "><h1 class="text-2xl opacity-90 text-center laptop:text-left laptop:pl-[700px] laptop:text-[34px] font-secheader text-darkRibbon p-2 ">Disclaimers</h1></div>
+
+<div class="flex font-bodytext justify-center items-center laptop:justify-start text-sm tablet:text-base mb-10 ">
+    <div class="laptop:ml-[300px] w-full px-5  laptop:w-[460px]">
+        <p>Due to copyright laws, we will need proof of artist / photographer consent to print works that are not originating from you.  Exceptions include pieces that are 100+ yrs old or in the public domain.
+        <br> Print pricing may vary due to supply chain issues and increased prices of our papers, matboards, foam core and frames. Unfortunately these costs must be passed on in order for our business to survive.    </p>   
+    </div>
+</div>
+
+
 
     </div>
   </section>
 
 
+
+
   
     
-<!-- <footer class="flex flex-row h-24 bg-primary">
-    <nav class="flex my-auto space-x-16 ml-24  whitespace-nowrap">
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
-          aria-current="page">Home</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
-          aria-current="page">Products & Services</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
-          aria-current="page">Print Pricing</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
-          aria-current="page">Contact Us</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
-          aria-current="page">Blog</a>
-    </nav>
-    <div class="flex flex-row w-auto break-normal items-center">
-        <p class= "text-white font-navtext text-xs"><strong>Address</strong> <br>Indian Orchard Mill <br>34 Front Street, Suite #344, Door #19,<br>Indian Orchard MA 01151<br>413-923-7278</p>
 
-    </div>
-</footer> -->
 
-<footer class="p-5 min-w-full bg-primary">
+<footer class="w-full z-30 bg-primary py-3">
+
   <div class="flex items-center justify-around">
-    <div class="flex space-x-8">
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
+    <div class="flex text-xs tablet:text-sm space-x-2 laptop:space-x-10">
+        <a href="/"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
           aria-current="page">Home</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
+        <a href="/productsservices"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
           aria-current="page">Products & Services</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
+        <a href="/pricing"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
           aria-current="page">Print Pricing</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
+        <a href="/contact"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
           aria-current="page">Contact Us</a>
-        <a href="#"
-          class=" text-white font-navtext rounded-md text-sm font-medium px-3 py-2"
+        <a href="/blogpage"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
           aria-current="page">Blog</a>
       </div>
+
+      <!-- address part -->
       <div>
-        <p class= "text-white font-navtext text-xs"><strong>Address</strong> <br>Indian Orchard Mill <br>34 Front Street, Suite #344, Door #19,<br>Indian Orchard MA 01151<br>413-923-7278</p>
+        <p class= "text-white hidden tablet:block font-navtext text-xs"><strong>Address</strong> <br>Indian Orchard Mill <br>34 Front Street, Suite #344, Door #19,<br>Indian Orchard MA 01151<br><span class="underline"> 413-923-7278</span></p>
       </div>
   </div>
 </footer>
@@ -215,6 +298,8 @@
 
   
 </body>
+
+
 
 
 

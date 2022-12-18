@@ -1,53 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://example.com/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/</loc>
     </url>
     <url>
-        <loc>https://example.com/blog/</loc>
-    </url>
-    <url>
-        <loc>https://example.com/blog/first/</loc>
-        <lastmod>2019-11-27</lastmod>
-    </url>
-    <url>
-        <loc>https://example.com/blogpage/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/blogpage/</loc>
         <lastmod>2022-12-12</lastmod>
     </url>
     <url>
-        <loc>https://example.com/contact/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/contact/</loc>
         <lastmod>2022-12-08</lastmod>
     </url>
     <url>
-        <loc>https://example.com/customframing/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/customframing/</loc>
         <lastmod>2022-12-09</lastmod>
     </url>
     <url>
-        <loc>https://example.com/digitalimageediting/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/digitalimageediting/</loc>
         <lastmod>2022-12-09</lastmod>
     </url>
     <url>
-        <loc>https://example.com/mediatypes/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/mediatypes/</loc>
         <lastmod>2022-12-09</lastmod>
     </url>
     <url>
-        <loc>https://example.com/pricing/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/pricing/</loc>
         <lastmod>2022-11-15</lastmod>
     </url>
     <url>
-        <loc>https://example.com/printpackages/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/printpackages/</loc>
         <lastmod>2022-12-09</lastmod>
     </url>
     <url>
-        <loc>https://example.com/productsservices/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/productsservices/</loc>
         <lastmod>2022-12-08</lastmod>
     </url>
     <url>
-        <loc>https://example.com/testimonial/</loc>
-        <lastmod>2022-11-15</lastmod>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/storelocation/</loc>
+        <lastmod>2022-12-17</lastmod>
     </url>
     <url>
-        <loc>https://example.com/wallapeel/</loc>
+        <loc>https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/wallapeel/</loc>
         <lastmod>2022-12-09</lastmod>
     </url>
 </urlset>

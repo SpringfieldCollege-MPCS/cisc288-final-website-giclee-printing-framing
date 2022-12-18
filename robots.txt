@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://springfieldcollege-mpcs.github.io/cisc288-final-website-giclee-printing-framing/sitemap.xml
