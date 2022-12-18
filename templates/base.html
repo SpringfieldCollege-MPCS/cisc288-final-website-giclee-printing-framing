@@ -10,17 +10,20 @@
   <script src="//unpkg.com/alpinejs" defer></script>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="{{config.base_url}}/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{config.base_url}}/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{config.base_url}}/favicon-16x16.png">
 
   <script>
     document.addEventListener('alpine:init', () => {
         Alpine.data('slider', () => ({
             currentIndex: 1,
             images: [
-                '{{config.base_url}}/images/WallAPeel.jpeg',
-                '{{config.base_url}}/images/Statue.jpeg',
-                '{{config.base_url}}/images/CustomFraming.jpeg',
-                '{{config.base_url}}/images/DigitalImageEditing.jpeg',
-                '{{config.base_url}}/images/MediaTypes.jpeg'
+                '{{config.base_url | safe}}/images/WallAPeel.jpeg',
+                '{{config.base_url | safe}}/images/Statue.jpeg',
+                '{{config.base_url | safe}}/images/CustomFraming.jpeg',
+                '{{config.base_url | safe}}/images/DigitalImageEditing.jpeg',
+                '{{config.base_url | safe}}/images/MediaTypes.jpeg'
             ],
             back() {
                 if (this.currentIndex > 1) {
