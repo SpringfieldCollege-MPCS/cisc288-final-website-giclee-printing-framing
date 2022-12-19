@@ -1,0 +1,32 @@
+{% macro footer() %}
+
+
+<footer class="w-full z-30 bg-primary py-3">
+
+  <div class="flex items-center justify-around">
+    <div class="flex text-xs tablet:text-sm space-x-2 laptop:space-x-10">
+        <a href="{{config.base_url}}/"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
+          aria-current="page">Home</a>
+        <a href="{{config.base_url}}/productsservices"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
+          aria-current="page">Products & Services</a>
+        <a href="{{config.base_url}}/pricing"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
+          aria-current="page">Print Pricing</a>
+        <a href="{{config.base_url}}/contact"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
+          aria-current="page">Contact Us</a>
+        <a href="{{config.base_url}}/blogpage"
+          class=" text-white font-navtext rounded-md font-medium px-3 py-2"
+          aria-current="page">Blog</a>
+      </div>
+
+      <!-- address part -->
+      <div>
+        <p class= "text-white hidden tablet:block font-navtext text-xs"><strong>Address</strong> <br>Indian Orchard Mill <br>34 Front Street, Suite #344, Door #19,<br>Indian Orchard MA 01151<br><span class="underline"> 413-923-7278</span></p>
+      </div>
+  </div>
+</footer>
+
+{% endmacro %}

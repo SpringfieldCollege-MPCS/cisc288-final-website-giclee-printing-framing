@@ -1,69 +1,76 @@
 {% macro header() %}
-<header class="bg-slate-600">
-  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
-    <div
-      class="flex w-full items-center justify-between border-b border-indigo-500 py-6 lg:border-none"
-    >
-      <div class="flex items-center">
-        <a href="/">
-          <span class="sr-only">CISC288</span>
-          <img
-            class="h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=white"
-            alt=""
-          />
-        </a>
-        <div class="ml-10 hidden space-x-8 lg:block">
-          <a
-            href="/blog"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Blog</a
-          >
 
-          <a
-            href="/testimonial"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Testimonials</a
-          >
+<header class="bg-primary z-30">
 
-          <a
-            href="/art"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Art</a
-          >
+  <nav x-data="{ isOpen: false }" class="mx-auto relative max-w-7xl ">
 
-          <a
-            href="#"
-            class="text-base font-medium text-white hover:text-indigo-50"
-            >Articles</a
-          >
+    <!-- Logo, Title and Hamburger icon -->
+    <div class="flex w-full items-center space-x-2 tablet:space-x-12 justify-center mobile:py-6 ">
 
+      <a href="{{config.base_url}}/">
+        {% set logo = resize_image(path="images/Logo.jpg", width=50, height=50, op="fill") %}
+        <img class="z-20 mx-auto " src="{{logo.url}}" alt="a picture of building" />
+      </a>
+
+      <h1
+        class=" text-base mobile:2xl tablet:text-3xl laptop:4xl text-center mx-auto font-semibold font-buttontext-400 text-white">
+        Giclée Printing and Framing of New England</h1>
+
+      <button @click="isOpen = !isOpen" type="submit">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white lg:hidden" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- section of nav links -->
+    <div class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4">
+      <div class="flex items-center mx-auto">
+
+        <div class="space-x-40 ">
+          <a href="{{config.base_url}}/" class="text-sm font-navtext text-white">Home</a>
+          <a href="{{config.base_url}}/productsservices" class="text-sm font-navtext text-white">Product & Services</a>
+          <a href="{{config.base_url}}/pricing" class="text-sm font-navtext text-white">Print Pricing</a>
+          <a href="{{config.base_url}}/contact" class="text-sm font-navtext text-white">Contact Us</a>
+          <a href="{{config.base_url}}/blogpage" class="text-sm font-navtext text-white">Blog</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alpine JS implementation for small screens' navbar -->
+    <div class="z-50 mobile-navbar">
+      <!-- navbar wrapper -->
+      <div x-cloak class="w-full bg-background shadow-xl text-white" x-show="isOpen" @click.away=" isOpen = false">
+        <div class="flex flex-col text-center text-xs font-navtext tablet:text-lg space-y-[2px]">
+
+          <a href="{{config.base_url}}/" class="bg-darkRibbon p-2 font-navtext text-backgroune">Home</a>
+
+          <a href="{{config.base_url}}/productsservices" class="bg-darkRibbon p-2 font-navtext text-backgroune">Product
+            & Services</a>
+
+
+          <a href="{{config.base_url}}/pricing" class="bg-darkRibbon p-2 font-navtext text-backgroune">Print Pricing</a>
+
+
+
+
+          <a href="{{config.base_url}}/contact" class="bg-darkRibbon p-2 font-navtext text-backgroune">Contact Us</a>
+
+
+
+          <a href="{{config.base_url}}/blogpage" class="bg-darkRibbon p-2 font-navtext text-backgroune">Blog</a>
 
         </div>
       </div>
-      <div class="ml-10 space-x-4">
-        <!-- <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-slate-500 py-2 px-4 text-base font-medium text-white hover:bg-opacity-75"
-          >Join</a
-        > -->
-        <a
-          href="#"
-          class="inline-block rounded-md border border-transparent bg-white py-2 px-4 text-base font-medium text-slate-600 hover:bg-indigo-50"
-          >Join</a
-        >
-      </div>
     </div>
-    <!-- <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Solutions</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Pricing</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Docs</a>
-  
-        <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Company</a>
-      </div> -->
+
   </nav>
 </header>
+
+
+
+
 
 {% endmacro %}

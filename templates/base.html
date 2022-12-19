@@ -1,25 +1,70 @@
 {% import 'macros/header.html' as macros_header -%}
+{% import 'macros/footer.html' as macros_footer -%}
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  <title>Giclée Printing & Framing of New England</title>
+  <script src="//unpkg.com/alpinejs" defer></script>
   <link rel="stylesheet" href="{{ get_url(path="styles/style.css") }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="apple-touch-icon" sizes="180x180" href="{{config.base_url}}/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{config.base_url}}/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{config.base_url}}/favicon-16x16.png">
+
+  <script>
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('slider', () => ({
+            currentIndex: 1,
+            images: [
+                '{{config.base_url | safe}}/images/WallAPeel.jpeg',
+                '{{config.base_url | safe}}/images/Statue.jpeg',
+                '{{config.base_url | safe}}/images/CustomFraming.jpeg',
+                '{{config.base_url | safe}}/images/DigitalImageEditing.jpeg',
+                '{{config.base_url | safe}}/images/MediaTypes.jpeg'
+            ],
+            back() {
+                if (this.currentIndex > 1) {
+                    this.currentIndex = this.currentIndex - 1;
+                }
+            },
+            next() {
+                if (this.currentIndex < this.images.length) {
+                    this.currentIndex = this.currentIndex + 1;
+                } else if (this.currentIndex <= this.images.length){
+                    this.currentIndex = this.images.length - this.currentIndex + 1
+                }
+            },
+        }))
+    })
+</script>
+
 </head>
 
-<body>
+<body class="bg-background">
 
   {% block header %}
     {{ macros_header::header() }}
   {% endblock header %}
 
   <section>
-    <div class="container mx-auto max-w-7xl p-8">
+    <div class="container max-w-[1440px] mx-auto relative">
       {% block content %} {% endblock %}
     </div>
   </section>
+
+
+
+
+  {% block footer %}
+    {{ macros_footer::footer()}}
+  {% endblock footer %}
 </body>
+
+
+
+
 
 </html>

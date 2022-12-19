@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+<div class="flex flex-col">
+    <div class="flex flex-row h-auto w-auto">
+      <!-- 1 of the 2 big colums under picture-->
+        <div class="hidden laptop:block desktop:w-52 laptop:w-10 h-auto bg-tan" ></div>
+      <!-- the 2nd big column where almost all information will be-->
+        <div class="w-full h-auto min-h-[calc(100vh_-_20vh)] flex flex-col">
+            <div class="mt-16 text-3xl tablet:text-5xl text-darkRibbon font-secheader text-center">Select Your Service</div>
+            <div class="h-auto w-auto grid laptop:grid-cols-3  mobile:grid-cols-1 laptop:pl-20 mobile:pl-10 laptop:pr-20 mobile:pr-10 mt-12 items-center laptop:gap-y-0 mobile:gap-y-10 ">
+                <div class="flex flex-col w-auto h-auto items-center">
+                    <a href="{{config.base_url}}/wallapeel">
+                        {% set pswallapeel = resize_image(path="images/productsandservicescrops/psWallAPeelCrop.jpg", width=244, height=158, op="fill") %}
+                        <img class="w-[244px] min-h-[158px] z-20 mx-auto" src="{{pswallapeel.url}}" alt="Frames and plant" />
+                        <!-- <img class="w-[244px] min-h-[158px]" src="https://via.placeholder.com/244x158.jpg" alt="Frames" > -->
+                    </a>
+                    <div class="text-center font-bodytext font-bold laptop:mt-4 mobile:mt-2">Wall A Peel</div>
+                </div>
+                <div class="flex flex-col w-auto h-auto items-center  ">
+                    <a href="{{config.base_url}}/digitalimageediting">
+                        {% set psdigitalimageediting = resize_image(path="images/productsandservicescrops/psDigitalImageEditingCrop.jpg", width=244, height=158, op="fill") %}
+                        <img class="w-[244px] min-h-[158px] z-20 mx-auto" src="{{psdigitalimageediting.url}}" alt="Hand laptop and camera" />
+                        <!-- <img class="w-[244px] min-h-[158px]" src="https://via.placeholder.com/244x158.jpg" alt="Frames" > -->
+                    </a>
+                    <div class="text-center font-bodytext font-bold laptop:mt-4 mobile:mt-2">Digital Image Editing</div>
+                </div>
+                <div class="flex flex-col w-auto h-auto items-center">
+                    <a href="{{config.base_url}}/mediatypes">
+                        {% set psmediatypes = resize_image(path="images/productsandservicescrops/psMediaTypesCrop.jpg", width=244, height=158, op="fill") %}
+                        <img class="w-[244px] min-h-[158px] z-20 mx-auto" src="{{psmediatypes.url}}" alt="artistic pictures framed on wall" />
+                        <!-- <img class="w-[280px] min-h-[158px]" src="https://via.placeholder.com/280x158.jpg" alt="Frames" > -->
+                    </a>
+                    <div class="text-center font-bodytext font-bold laptop:mt-4 mobile:mt-2">Media Types</div>
+                </div>
+            </div>
+            <div class="h-auto grid laptop:grid-cols-2 mobile:grid-cols-1 laptop:pl-44 mobile:pl-22 laptop:pr-44 mobile:pr-22 items-center laptop:mt-12 mobile:mt-10 mb-24 laptop:gap-y-0 mobile:gap-y-10">
+                <div class="flex flex-col w-auto h-auto ">
+                    <a href="{{config.base_url}}/printpackages">
+                        {% set psprintpackages = resize_image(path="images/productsandservicescrops/psPrintPackagesCrop.jpg", width=244, height=158, op="fill") %}
+                        <img class=" items-end w-[244px] h-[158px] z-20 mx-auto" src="{{psprintpackages.url}}" alt="Print on table" />
+                        <!-- <img class="w-[316px] min-h-[158px]" src="https://via.placeholder.com/316x158.jpg" alt="Frames" > -->
+                    </a>
+                    <div class="text-center font-bodytext font-bold laptop:mt-4 mobile:mt-2">Print Packages</div>
+                </div>
+                <div class="flex flex-col w-auto h-auto ">
+                    <a href="{{config.base_url}}/customframing">
+                        {% set pscustomframing = resize_image(path="images/productsandservicescrops/psCustomFramingCrop.jpg", width=244, height=158, op="fill") %}
+                        <img class=" items-start w-[244px] h-[158px] z-20 mx-auto" src="{{pscustomframing.url}}" alt="artistic pictures framed on wall" />
+                        <!-- <img class="w-[316px] min-h-[158px]" src="https://via.placeholder.com/316x158.jpg" alt="Frames" > -->
+                    </a>
+                    <div class="text-center font-bodytext font-bold laptop:mt-4 mobile:mt-2">Custom Framing</div>
+                </div>
+            </div>
+        </div>
+                
+            
+        
+        <div class="hidden laptop:block desktop:w-52 laptop:w-10 h-auto bg-tan"></div>
+
+    </div>
+    </div>
+{% endblock content %}
