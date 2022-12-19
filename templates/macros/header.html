@@ -12,102 +12,59 @@
         <img class="z-20 mx-auto " src="{{logo.url}}" alt="a picture of building" />
       </a>
 
-      <h1 class=" text-base mobile:2xl tablet:text-3xl laptop:4xl text-center mx-auto font-semibold font-buttontext-400 text-white">Giclée Printing and Framing of New England</h1>
-      
+      <h1
+        class=" text-base mobile:2xl tablet:text-3xl laptop:4xl text-center mx-auto font-semibold font-buttontext-400 text-white">
+        Giclée Printing and Framing of New England</h1>
+
       <button @click="isOpen = !isOpen" type="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white lg:hidden" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white lg:hidden" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
     </div>
-   
+
     <!-- section of nav links -->
-    <div
-      class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4">
+    <div class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4">
       <div class="flex items-center mx-auto">
-        
+
         <div class="space-x-40 ">
-          <a
-            href="{{config.base_url}}/"
-            class="text-sm font-navtext text-white"
-            >Home</a
-          >
-          <a
-            href="{{config.base_url}}/productsservices"
-            class="text-sm font-navtext text-white"
-            >Product & Services</a
-          >
-          <a
-            href="{{config.base_url}}/pricing"
-            class="text-sm font-navtext text-white"
-            >Print Pricing</a
-          >
-          <a
-            href="{{config.base_url}}/contact"
-            class="text-sm font-navtext text-white"
-            >Contact Us</a
-          >
-          <a
-            href="{{config.base_url}}/blogpage"
-            class="text-sm font-navtext text-white"
-            >Blog</a
-          >
+          <a href="{{config.base_url}}/" class="text-sm font-navtext text-white">Home</a>
+          <a href="{{config.base_url}}/productsservices" class="text-sm font-navtext text-white">Product & Services</a>
+          <a href="{{config.base_url}}/pricing" class="text-sm font-navtext text-white">Print Pricing</a>
+          <a href="{{config.base_url}}/contact" class="text-sm font-navtext text-white">Contact Us</a>
+          <a href="{{config.base_url}}/blogpage" class="text-sm font-navtext text-white">Blog</a>
         </div>
-      </div> 
+      </div>
     </div>
 
     <!-- Alpine JS implementation for small screens' navbar -->
     <div class="z-50 mobile-navbar">
       <!-- navbar wrapper -->
-      <div class="w-full bg-background shadow-xl" x-show="isOpen"
-          @click.away=" isOpen = false">
-          <div class="flex flex-col text-center text-xs font-navtext tablet:text-lg space-y-[2px]">
-            <div class="bg-darkRibbon p-2" >
-              <a
-              href="{{config.base_url}}/"
-              class=" font-navtext text-backgroune"
-              >Home</a>
-            </div>
+      <div x-cloak class="w-full bg-background shadow-xl text-white" x-show="isOpen" @click.away=" isOpen = false">
+        <div class="flex flex-col text-center text-xs font-navtext tablet:text-lg space-y-[2px]">
 
-            <div class="bg-darkRibbon p-2" >
-            <a
-              href="{{config.base_url}}/productsservices"
-              class="font-navtext text-backgroune"
-              >Product & Services</a
-            >
-          </div>
+          <a href="{{config.base_url}}/" class="bg-darkRibbon p-2 font-navtext text-backgroune">Home</a>
 
-          <div class="bg-darkRibbon p-2" >
-            <a
-              href="{{config.base_url}}/pricing"
-              class="font-navtext text-backgroune"
-              >Print Pricing</a
-            >
-            </div>
-
-            <div class="bg-darkRibbon p-2" >
-
-            <a
-              href="{{config.base_url}}/contact"
-              class=" font-navtext text-backgroune"
-              >Contact Us</a
-            >
-          </div>
+          <a href="{{config.base_url}}/productsservices" class="bg-darkRibbon p-2 font-navtext text-backgroune">Product
+            & Services</a>
 
 
-          <div class="bg-darkRibbon p-2 " >
-            <a
-              href="{{config.base_url}}/blogpage"
-              class="font-navtext text-backgroune"
-              >Blog</a
-            >
-          </div>
-          </div>
+          <a href="{{config.base_url}}/pricing" class="bg-darkRibbon p-2 font-navtext text-backgroune">Print Pricing</a>
+
+
+
+
+          <a href="{{config.base_url}}/contact" class="bg-darkRibbon p-2 font-navtext text-backgroune">Contact Us</a>
+
+
+
+          <a href="{{config.base_url}}/blogpage" class="bg-darkRibbon p-2 font-navtext text-backgroune">Blog</a>
+
+        </div>
       </div>
-  </div>
+    </div>
 
   </nav>
 </header>
