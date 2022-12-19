@@ -57,102 +57,59 @@
         <img class="z-20 mx-auto " src="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing&#x2F;processed_images&#x2F;7ebd96b20e54486a00.jpg" alt="a picture of building" />
       </a>
 
-      <h1 class=" text-base mobile:2xl tablet:text-3xl laptop:4xl text-center mx-auto font-semibold font-buttontext-400 text-white">Giclée Printing and Framing of New England</h1>
-      
+      <h1
+        class=" text-base mobile:2xl tablet:text-3xl laptop:4xl text-center mx-auto font-semibold font-buttontext-400 text-white">
+        Giclée Printing and Framing of New England</h1>
+
       <button @click="isOpen = !isOpen" type="submit">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white lg:hidden" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white lg:hidden" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
 
     </div>
-   
+
     <!-- section of nav links -->
-    <div
-      class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4">
+    <div class="hidden container mx-auto laptop:flex w-full items-center justify-between py-4">
       <div class="flex items-center mx-auto">
-        
+
         <div class="space-x-40 ">
-          <a
-            href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/"
-            class="text-sm font-navtext text-white"
-            >Home</a
-          >
-          <a
-            href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/productsservices"
-            class="text-sm font-navtext text-white"
-            >Product & Services</a
-          >
-          <a
-            href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/pricing"
-            class="text-sm font-navtext text-white"
-            >Print Pricing</a
-          >
-          <a
-            href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/contact"
-            class="text-sm font-navtext text-white"
-            >Contact Us</a
-          >
-          <a
-            href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/blogpage"
-            class="text-sm font-navtext text-white"
-            >Blog</a
-          >
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/" class="text-sm font-navtext text-white">Home</a>
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/productsservices" class="text-sm font-navtext text-white">Product & Services</a>
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/pricing" class="text-sm font-navtext text-white">Print Pricing</a>
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/contact" class="text-sm font-navtext text-white">Contact Us</a>
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/blogpage" class="text-sm font-navtext text-white">Blog</a>
         </div>
-      </div> 
+      </div>
     </div>
 
     <!-- Alpine JS implementation for small screens' navbar -->
     <div class="z-50 mobile-navbar">
       <!-- navbar wrapper -->
-      <div class="w-full bg-background shadow-xl" x-show="isOpen"
-          @click.away=" isOpen = false">
-          <div class="flex flex-col text-center text-xs font-navtext tablet:text-lg space-y-[2px]">
-            <div class="bg-darkRibbon p-2" >
-              <a
-              href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/"
-              class=" font-navtext text-backgroune"
-              >Home</a>
-            </div>
+      <div x-cloak class="w-full bg-background shadow-xl text-white" x-show="isOpen" @click.away=" isOpen = false">
+        <div class="flex flex-col text-center text-xs font-navtext tablet:text-lg space-y-[2px]">
 
-            <div class="bg-darkRibbon p-2" >
-            <a
-              href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/productsservices"
-              class="font-navtext text-backgroune"
-              >Product & Services</a
-            >
-          </div>
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/" class="bg-darkRibbon p-2 font-navtext text-backgroune">Home</a>
 
-          <div class="bg-darkRibbon p-2" >
-            <a
-              href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/pricing"
-              class="font-navtext text-backgroune"
-              >Print Pricing</a
-            >
-            </div>
-
-            <div class="bg-darkRibbon p-2" >
-
-            <a
-              href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/contact"
-              class=" font-navtext text-backgroune"
-              >Contact Us</a
-            >
-          </div>
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/productsservices" class="bg-darkRibbon p-2 font-navtext text-backgroune">Product
+            & Services</a>
 
 
-          <div class="bg-darkRibbon p-2 " >
-            <a
-              href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/blogpage"
-              class="font-navtext text-backgroune"
-              >Blog</a
-            >
-          </div>
-          </div>
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/pricing" class="bg-darkRibbon p-2 font-navtext text-backgroune">Print Pricing</a>
+
+
+
+
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/contact" class="bg-darkRibbon p-2 font-navtext text-backgroune">Contact Us</a>
+
+
+
+          <a href="https:&#x2F;&#x2F;springfieldcollege-mpcs.github.io&#x2F;cisc288-final-website-giclee-printing-framing/blogpage" class="bg-darkRibbon p-2 font-navtext text-backgroune">Blog</a>
+
+        </div>
       </div>
-  </div>
+    </div>
 
   </nav>
 </header>
@@ -176,7 +133,7 @@
       <!-- 1 of the 2 big colums under picture-->
         <div class="hidden laptop:block desktop:w-52 laptop:w-10 h-auto bg-tan" ></div>
       <!-- the 2nd big column where almost all information will be-->
-        <div class="w-full h-auto flex flex-col">
+        <div class="w-full h-auto min-h-[calc(100vh_-_20vh)] flex flex-col">
             <div class="mt-16 text-3xl tablet:text-5xl text-darkRibbon font-secheader text-center">Select Your Service</div>
             <div class="h-auto w-auto grid laptop:grid-cols-3  mobile:grid-cols-1 laptop:pl-20 mobile:pl-10 laptop:pr-20 mobile:pr-10 mt-12 items-center laptop:gap-y-0 mobile:gap-y-10 ">
                 <div class="flex flex-col w-auto h-auto items-center">
@@ -227,6 +184,9 @@
             
         
         <div class="hidden laptop:block desktop:w-52 laptop:w-10 h-auto bg-tan"></div>
+
+    </div>
+    </div>
 
     </div>
   </section>
